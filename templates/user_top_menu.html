@@ -1,0 +1,9 @@
+{% if user_role == 'factor' %}
+<li><a href="/save/">Add offer</a></li>
+<li {% if active == 'user' %}class="active"{% endif %}><a href="/account/{{ user.id }}/">(My account: {{ user.email }})</a></li>
+<li><a href="/logout">logout</a></li>
+{% else %}
+<li><a href="/save/">Add invoice</a></li>
+<li {% if active == 'user' %}class="active"{% endif %}><a href="/account/{{ user.id }}/">(My account: {{ user.email }})</a></li>
+<li><a href="/logout">logout</a></li>
+{% endif %}

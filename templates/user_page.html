@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ user }}{% endblock %}
+{% block head %}Invoices for User - {{ user }}{% endblock %}
+{% block content %}
+{% if invoices %}
+{% for invoice in invoices %}
+<li><a href="{{ invoice.link.url }}">{{ invoice }}</a></li>
+{% endfor %}
+{% else %}
+<p>No invoices found.</p>
+{% endif %}
+{% endblock %}

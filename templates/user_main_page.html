@@ -1,0 +1,5 @@
+{% if user_role == 'factor' %}
+<p>Welcome {{ user.email }}! Here you can add offer for invoices!</p>
+{% else %}
+<p>Welcome {{ user.email }}! Here you can add and share invoices!</p>
+{% endif %}

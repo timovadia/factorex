@@ -1,0 +1,153 @@
+<style>
+   table {
+    width: 100%; /* Ширина таблицы в процентах */
+   }
+   .col1 {
+    width: 10%; /* Ширина ячейки */
+   }
+   .col2 {
+    width: 10%; /* Ширина ячейки */
+   }
+   .col3 {
+    width: 10%; /* Ширина ячейки */
+   }
+   .col4 {
+    width: 10%; /* Ширина ячейки */
+   }
+   .col5 {
+    width: 10%; /* Ширина ячейки */
+   }
+    .col6 {
+    width: 10%; /* Ширина ячейки */
+   }
+</style>
+
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID#</th>
+      <th>Поставщик</th>
+      <th>Покупатель (дебитор)</th>
+      <th>Сумма счета</th>
+      <th>Период отсрочки</th>
+      <th>Дата размещения</th>
+      <th>Изменение заявки Фактора</th>
+      <th>Операции</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>1</td>
+      <td>Поставщик 1</td>
+      <td>АШАН</td>
+      <td>100'000.00 RUR</td>
+      <td>35 дн.</td>
+      <td>{{ time|date:"d.m.Y, G:i" }} MSK</td>
+      <td><img src="{{STATIC_URL}}up_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 70% <span class="badge badge-success">+2%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Поставщик 2</td>
+      <td>Ростелеком</td>
+      <td>1'500'000.00 RUR</td>
+      <td>60 дн.</td>
+      <td>{{ time1|date:"d.m.Y" }}, 14:05 MSK</td>
+      <td><img src="{{STATIC_URL}}right_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 90% <span class="badge badge-warning">0%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Поставщик 1</td>
+      <td>Лента</td>
+      <td>250'000.00 RUR</td>
+      <td>45 дн.</td>
+      <td>{{ time2|date:"d.m.Y" }}, 18:00 MSK</td>
+      <td><img src="{{STATIC_URL}}down_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 83% <span class="badge badge-important">-5%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+    <tr class="success">
+      <td>4</td>
+      <td>Поставщик 3</td>
+      <td>ГУ МЧС России по Ленобласти</td>
+      <td>900'000.00 RUR</td>
+      <td>55 дн.</td>
+      <td>{{ time3|date:"d.m.Y" }}, 22:00 MSK</td>
+      <td><img src="{{STATIC_URL}}right_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 90% <span class="badge badge-warning">0%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+    <tr class="danger">
+      <td>5</td>
+      <td>Поставщик 4</td>
+      <td>Ростелеком</td>
+      <td>3'000'000.00 RUR</td>
+      <td>60 дн.</td>
+      <td>{{ time4|date:"d.m.Y" }}, 10:30 MSK</td>
+      <td><img src="{{STATIC_URL}}up_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 93% <span class="badge badge-success">+7%</span></td>
+      <td><a href="#" data-toggle="modal" data-target="#myModal-3"><button class="btn btn-small btn-success" type="button"><i class="icon-list icon-white"></i> Подробнее</button></a></td>
+    </tr>
+    <tr class="warning">
+      <td>6</td>
+      <td>Поставщик 2</td>
+      <td>ВымпелКом</td>
+      <td>4'700'000.00 RUR</td>
+      <td>90 дн.</td>
+      <td>{{ time5|date:"d.m.Y" }}, 14:00 MSK</td>
+      <td><img src="{{STATIC_URL}}down_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 85% <span class="badge badge-important">-1%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+    <tr class="active">
+      <td>7</td>
+      <td>Поставщик 5</td>
+      <td>ИП Иванов И.И.</td>
+      <td>50'000.00 RUR</td>
+      <td>14 дн.</td>
+      <td>{{ time6|date:"d.m.Y, G:i" }} MSK</td>
+      <td><img src="{{STATIC_URL}}up_top_100.png" alt="">&nbsp;&nbsp;Аванс (дисконт): 75% <span class="badge badge-success">+5%</span></td>
+      <td><button class="btn btn-small" type="button"><i class="icon-list"></i> Подробнее</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal hide fade" id="myModal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+        <h4 class="modal-title" id="myModalLabel-3">Информация по счету #5</h4>
+      </div>
+      <div class="modal-body">
+        <p><span class="label label-info">Info</span> - информация будет доступна при акцепте заявки Поставщиком.</p>
+        <p><span class="label label-warning">Log in</span> - доступно только авторизованным пользователям.</p>
+        <p><strong>Поставщик:</strong> ******* <span class="label label-info">Info</span></p>
+        <p><strong>ИНН: </strong> **********5775 <span class="label label-info">Info</span></p>
+        <p><strong>Вид деятельности:</strong> Системная и сетевая интеграция (инженерные системы, системы связи)</p>
+        <p><strong>Покупатель (дебитор):</strong> Ростелеком</p>
+        <p><strong>Сумма счета к оплате:</strong> 3'000'000.00 RUR</p>
+        <p><strong>Период отсрочки:</strong> 60 дн.</p>
+        <p><strong>Дата погашения задолженности:</strong> {{ time_modal|date:"d.m.Y" }}</p>
+        <p><strong>Текущее предложение Фактора: </strong>
+        <li>аванс (дисконт) - 93%</li>
+        <li>ставка по кредиту - 12% годовых</li>
+        <li>комиссия фактора - 3'000.00 RUR</li></p>
+        <p><strong>Сделайте новое предложение и сохраните заявку: <span class="label label-warning">Log in</span></strong></p>
+        <div class="input-prepend">
+        <span class="add-on">%</span><input class="span2" id="prependedInput" size="16" type="text" placeholder="Ваш аванс (дисконт)">
+        </div>
+        <div class="input-prepend">
+        <span class="add-on">%</span><input class="span3" id="prependedInput2" size="16" type="text" placeholder="Ваша ставка по кредиту">
+        </div>
+        <div class="input-prepend input-append">
+        <span class="add-on">RUR</span><input class="span2" id="appendedPrependedInput" size="16" type="text" placeholder="Ваша комиссия"><span class="add-on">.00</span>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary"><i class="icon-check icon-white"></i> Сохранить заявку</button><button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>

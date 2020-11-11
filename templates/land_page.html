@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% block title %}factorex{% endblock %}
+{% block menu %}
+<div class="navbar-wrapper">
+
+<div class="container">
+<div class="navbar navbar-inverse">
+<div class="navbar-inner">
+
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+</a>
+
+<a class="brand" href="/">factorex</a>
+
+<div class="nav-collapse collapse">
+<ul class="nav">
+<li class="active"><a href="/">О сервисе</a></li>
+<li><a href="/contact/">Контакты</a></li>
+</ul>
+{% include "menu_form.html" %}
+</div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<div id="myCarousel" class="carousel slide">
+<div class="carousel-inner">
+<div class="item active">
+<img src="{{STATIC_URL}}fex_1.png" alt="">
+<div class="container">
+<div class="carousel-caption" style="text-align:center">
+<p class="lead">Factorex.ru - онлайн сервис для участников факторингового рынка.</p>
+<p>До сих пор факторы и поставщики не могли удобным и быстрым способом искать наилучшие предложения по финансированию дебиторки.</p>
+<p>Площадка Factorex является электронным интегратором рынка <a href="#" data-toggle="modal" data-target="#myModal-1">факторинга</a> и предоставляет
+такие возможности!</p>
+</br><a class="btn btn-large btn-primary" style="gorizontal-align: top" href="/request-invite/"><i class="icon-thumbs-up icon-white"></i> Я поставщик. Отправить заявку на финансирование</a>
+</div>
+</div>
+</div>
+<div class="item">
+<img src="{{STATIC_URL}}fex_2.png" alt="">
+<div class="container">
+<div class="carousel-caption" style="text-align:center">
+<p class="lead">Factorex объединяет участников рынка (поставщиков и факторов) и улучшает процессы обмена информацией.</p>
+<p>Tакже, Factorex упрощает процессы проведения переговоров и принятия решений. Схема финансирования при этом не изменяется.</p>
+</br><a class="btn btn-large btn-primary" href="/request-invite/"><i class="icon-thumbs-up icon-white"></i> Я поставщик. Отправить заявку на финансирование</a>
+</div>
+</div>
+</div>
+<div class="item">
+<img src="{{STATIC_URL}}fex_3.png" alt="">
+<div class="container">
+<div class="carousel-caption" style="text-align:center">
+<p class="lead">Factorex работает быстро и просто. Легко размещать заявки и вести переговоры (торговлю).</p>
+<p>Сегодня вам достаточно разместить свое предложение, завтра вы уже заключаете договор о финансировании и получаете деньги.</p>
+</br><a class="btn btn-large btn-primary" href="/request-invite/"><i class="icon-thumbs-up icon-white"></i> Я поставщик. Отправить заявку на финансирование</a>
+</div>
+</div>
+</div>
+</div>
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+<hr>
+{% include "table_invoice.html" %}
+
+    <hr>
+
+        <div class="row">
+            <div class="span4">
+                <!-- <img class="img-circle img-responsive text-center" src="http://placehold.it/300x300"> -->
+                <h2>Какие преимущества?</h2>
+                <p>С помощью Factorex вы получаете быстрый, гибкий доступ к финансированию дебиторки.
+                   Вы точно будете знать, какие деньги вы получите, прежде чем заключить договор о финансировании.
+                   На Factorex нет никаких долговых обязательств.</p>
+                <p>Преимущества для факторов:
+                   <li>снижение стоимости размещения капитала</li>
+                   <li>повышение эффективности бизнес-процессов</li>
+                   <li>расширение круга клиентов</li>
+                </p>
+                <p>Преимущества для поставщиков:
+                   <li>снижение расходов на привлечение финансов</li>
+                   <li>повышение уровня финансовой независимости</li>
+                   <li>расширение круга инвесторов</li>
+                </p>
+
+
+            </div>
+            <div class="span4">
+                <!-- <img class="img-circle img-responsive" src="http://placehold.it/300x300"> -->
+                <h2>В чем суть factorex?</h2>
+                <p>Factorex - это <a href="#" data-toggle="modal" data-target="#myModal-2">электронный листинг</a> и аукцион контрактов поставщиков различных сфер деятельности.</p>
+                <p>Поставщик размещает информацию о контрактах по которым необходимо финансирование.
+                   Любой зарегистрированный на сервисе фактор (факторинговая компания, банк или инвестор)
+                   просматривает информацию по контрактам и торгуется за финансирование путем размещения заявок.</p>
+                <p>Процедура оформления документов не изменяется. Поставщик осуществляет поставку товаров (услуг) с отсрочкой платежа
+                   в соответствии с договором поставки. И после рассмотрения заявок факторов и принятия (акцепта) предложения о финансировании
+                   заключает договор с фактором и передает ему права требования. На данный момент Factorex не участвует в
+                   оформлении и передаче документов, а осуществляет только посреднеческую деятельность по поиску и обмену информацией.</p>
+                <p>Factorex - не коллекторское агенство и принимает к размещению только качественную дебиторку с
+                   отсрочкой не более 180 дней.</p>
+            </div>
+            <div class="span4">
+                <!-- <img class="img-circle img-responsive" src="http://placehold.it/300x300"> -->
+                <h2>Сколько это стоит? </h2>
+                <p>На Factorex действует простая и прозрачная система ценообразования: ежемесячная абонентская плата + комиссионное вознаграждение.
+                <p>Абонентская плата:
+                   <li>для факторов - 5000 руб./месяц</li>
+                   <li>для поставщиков - 3000 руб./месяц</li>
+                </p>
+                <p>Вознаграждение Factorex за совершение сделок составляет 0,15% от цены уступаемого права требования (суммы счета)
+                при удачном завершении сделки. Под удачной сделкой на Factorex понимается факт принятия (одобрения) поставщиком
+                    конкретного предложения (заявки) от фактора.</p>
+                <p>Factorex получает вознаграждение только за фактический результат. Вы всегда
+                  видите стоимость той или иной транзакции. Все прозрачно.
+                </p>
+            </div>
+        </div>
+
+</br>
+      <div class="well">
+         <div style="text-align:center">
+         <h4><p>Современный бизнес уже переходит на финансирование контрактов с помощью factorex </p>
+             <p>Первые пользователи сервиса - 3 месяца бесплатно!</p></h4>
+         <p>Регистрируясь сейчас, в дальнейшем при запуске сервиса вы получаете возможность
+             3 месяца пользоваться услугами без абонентской платы!</p>
+         </div>
+         <div style="text-align:center">
+         <a class="btn btn-large btn-success well" href="/request-invite/"><i class="icon-thumbs-up icon-white"></i> Присоединяйся к factorex. Go!</a>
+         </div>
+
+      </div>
+
+         <div style="text-align:center"><!-- social -->
+
+             <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            <link rel="stylesheet" href="{{STATIC_URL}}social-likes/social-likes_classic.css">
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script src="{{STATIC_URL}}social-likes/social-likes.min.js"></script>
+
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: ru_RU</script>
+
+
+        <div class="social-likes">
+                <div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+                <div class="mailru" title="Поделиться ссылкой в Моём мире">Мой мир</div>
+                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+                <div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+                <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Я рекоммендую</div>
+        </div>
+
+            </br>
+            <p><div><script type="IN/Share" data-url="factorex.ru" data-counter="right"></script></div></p>
+        </div><!-- social -->
+
+</div> <!-- container -->
+
+
+</body>
+
+<!-- Modal -->
+<div class="modal hide fade" id="myModal-1"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel-1">Факторинг</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>Факто́ринг</strong> (англ. factoring от англ. factor — посредник, торговый агент) —
+        это комплекс услуг для производителей и поставщиков, ведущих торговую деятельность на условиях отсрочки платежа.</p>
+        <p>В операции факторинга обычно участвуют три лица: фактор (факторинговая компания или банк) —
+        покупатель требования, поставщик товара (кредитор) и покупатель товара (дебитор).</p>
+        <p>Основной деятельностью фактора является кредитование поставщиков путём выкупа
+        краткосрочной дебиторской задолженности, как правило, не превышающей 180 дней.</p>
+        <p>Между фактором и поставщиком товара заключается договор о том,
+        что ей по мере возникновения требований по оплате поставок продукции предъявляются
+        счета-фактуры или другие платёжные документы.
+        Фактор осуществляет дисконтирование этих документов путём выплаты клиенту 60−90 %
+        стоимости требований. После оплаты продукции покупателем фактор доплачивает остаток суммы поставщику,
+        удерживая процент с него за предоставленный кредит и комиссионные платежи за оказанные услуги.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal hide fade" id="myModal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel-2">Листинг</h3>
+      </div>
+      <div class="modal-body">
+        <p><strong>Ли́стинг</strong> (от англ. list — список) — совокупность процедур включения документов в
+            биржевой список (список документов, допущенных к биржевым торгам), осуществление контроля за соответствием
+            документов установленным биржей условиям и требованиям. Листингом часто называют сам биржевой список.</p>
+        <p>Первичные документы поставщиков (договор на поставку товара/подряда/возмездного оказания услуг и т.д., акты о сдаче-приемке выполненных работ (оказания услуг), счета-фактуры, накладные, универсальные передаточные документы и др.) признаются прошедшими процедуру листинга после осуществления экспертизы и
+            включения их в котировальный лист.</p>
+        <p>Процедура листинга Factorex включает проведение верификации первичных документов, а также экспресс-скоринг поставщика и покупателя (дебитора).</p>
+        <p>Цели листинга:
+           <li>создание благоприятных условий для торговли;</li>
+           <li>повышение информированности участников рынка;</li>
+           <li>выявление наиболее качественных и надёжных контрагентов;</li>
+           <li>защита интересов ивесторов и повышение их доверия к объектам торговли.</li>
+          </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /.container -->
+
+{% endblock %}

@@ -1,0 +1,57 @@
+<style>
+   table {
+    width: 100%; /* Ширина таблицы в процентах */
+   }
+   .col1 {
+    width: 7%; /* Ширина ячейки */
+   }
+   .col2 {
+    width: 18%; /* Ширина ячейки */
+   }
+   .col3 {
+    width: 18%; /* Ширина ячейки */
+   }
+   .col4 {
+    width: 18%; /* Ширина ячейки */
+   }
+   .col5 {
+    width: 20%; /* Ширина ячейки */
+   }
+</style>
+
+<h4>TOP invoices:</h4>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>ID#</th>
+      <th>Contractor</th>
+      <th>Buyer</th>
+      <th>Invoice amount</th>
+      <th>Delay days</th>
+      <th>Create date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for invoice in invoice_list %}
+  {% if invoice.id == 1 %}
+    <tr class="warning">
+      <td class="col1">{{ invoice.id }}</td>
+      <td class="col2">{{ invoice.contractor }}</td>
+      <td class="col3">{{ invoice.buyer }}</td>
+      <td class="col4">{{ invoice.invoice_amount }} руб.</td>
+      <td class="col5">{{ invoice.delay_days }} дн.</td>
+      <td>{{ invoice.create_date }}</td>
+    </tr>
+  {% else %}
+    <tr class="success">
+      <td class="col1">{{ invoice.id }}</td>
+      <td class="col2">{{ invoice.contractor }}</td>
+      <td class="col3">{{ invoice.buyer }}</td>
+      <td class="col4">{{ invoice.invoice_amount }} руб.</td>
+      <td class="col5">{{ invoice.delay_days }} дн.</td>
+      <td>{{ invoice.create_date }}</td>
+    </tr>
+  {% endif %}
+  {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}factorex{% endblock %}
+{% block head %}Welcome to Factorex{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+   {% include "user_main_page.html" %}
+{% else %}
+<p>You need to <a href="/login/">login</a> before you can store and share invoices.</p>
+{% include "top_invoice.html" %}
+{% endif %}
+{% endblock %}
